@@ -1,0 +1,177 @@
+/* styles/Home.module.css */
+
+/* Container */
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Content */
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure main takes full width */
+  max-width: 1200px; /* Adjust based on your grid's max width */
+  margin: 0 auto; /* Center the main content */
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+/* Editable Table Section */
+.tableSection {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+.editableTable {
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures fixed table layout */
+  min-width: 150px; /* Minimum width to prevent too small columns */
+}
+
+.editableTable th,
+.editableTable td {
+  border: 1px solid #ddd;
+  padding: 6px; /* Reduced padding for skinnier cells */
+  width: 150px; /* Fixed width for columns */
+  text-align: center; /* Center-align text and inputs */
+}
+
+.editableTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4caf50;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.editableTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.editableTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tableInput {
+  width: 100%;
+  padding: 4px; /* Reduced padding for skinnier inputs */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .editableTable th,
+  .editableTable td {
+    width: 120px; /* Adjust column width for smaller screens */
+    padding: 4px;
+  }
+
+  .tableInput {
+    padding: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editableTable th,
+  .editableTable td {
+    width: 100px; /* Further adjust for very small screens */
+  }
+}
+
+.appendSection {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.appendButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.appendButton:hover {
+  background-color: #45a049;
+}
+
+.appendButton:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
